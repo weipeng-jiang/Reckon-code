@@ -1,0 +1,29 @@
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { StockDateTime } from "../../actions";
+
+import LogEntry from "../logEntry/LogEntry";
+
+const LogEntryList = ({ logDisabled }) => {
+  const stocks = useSelector(state => state.stocks);
+
+  const [fullStocksList, setFullStocksList] = useState([]);
+
+  useEffect(() => {
+    if (!logDisabled && stocks) {
+      setFullStocksList([stocks, ...fullStocksList]); // This will get large over time, but for the purpose of this test, it'll suvice.
+    }
+  }, [stocks]);
+
+  console.log("fullStocksList", stocks, fullStocksList);
+
+  return (
+    <div style={{ margin: "4px" }}>
+      {fullStocksList?.map(({ time, stocks }: StockDateTime) => (
+        <LogEntry time={time} stocks={stocks} />
+      ))}
+    </div>
+  );
+};
+
+export default LogEntryList;
