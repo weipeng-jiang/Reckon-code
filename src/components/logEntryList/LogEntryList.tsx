@@ -15,8 +15,6 @@ const LogEntryList = ({ logDisabled }) => {
     }
   }, [stocks]);
 
-  console.log("fullStocksList", stocks, fullStocksList);
-
   return (
     <div style={{ margin: "4px" }}>
       {fullStocksList?.map(({ time, stocks }: StockDateTime) => (
