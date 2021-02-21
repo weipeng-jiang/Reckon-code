@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import LogEntryList from "../logEntryList/LogEntryList";
 
 const Log = () => {

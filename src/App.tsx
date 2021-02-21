@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-import "./App.css";
 import { useDispatch } from "react-redux";
-import { getStocks } from "./actions";
 
+import { getStocks } from "./actions";
 import Summary from "./components/summary/Summary";
 import Log from "./components/logs/Log";
 

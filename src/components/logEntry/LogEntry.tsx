@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Stock } from "../../actions";
 
 const LogEntry = ({ time, stocks }) => {

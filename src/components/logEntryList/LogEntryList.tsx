@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { StockDateTime } from "../../actions";
 
+import { StockDateTime } from "../../actions";
 import LogEntry from "../logEntry/LogEntry";
 
 const LogEntryList = ({ logDisabled }) => {
