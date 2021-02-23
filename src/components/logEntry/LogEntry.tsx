@@ -7,7 +7,7 @@ const LogEntry = ({ time, stocks }) => {
     <div>
       {time && `Updates for ${time}`}
       {stocks?.map(({ code, price }: Stock) => (
-        <div>{`${code} : $${price}`}</div>
+        <div key={code}>{`${code} : $${price}`}</div>
       ))}
       <br />
     </div>

@@ -23,7 +23,7 @@ const Summary = () => {
         </thead>
         <tbody>
           {stocksList?.map(({ code, price }: Stock) => (
-            <tr>
+            <tr key={code}>
               <SummaryEntry code={code} price={price} />
             </tr>
           ))}

@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { getStocks } from "./actions";
 import Summary from "./components/summary/Summary";
-import Log from "./components/logs/Log";
+import Log from "./components/log/Log";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -16,6 +16,7 @@ const App = () => {
   }, [dispatch]);
 
   return (
+    // Would use a seprate style sheet for production App.
     <>
       <div style={{ width: "50%", float: "right", margin: "10px" }}>
         <Summary />

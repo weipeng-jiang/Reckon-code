@@ -18,7 +18,8 @@ const LogEntryList = ({ logDisabled }) => {
   return (
     <div style={{ margin: "4px" }}>
       {fullStocksList?.map(({ time, stocks }: StockDateTime) => (
-        <LogEntry time={time} stocks={stocks} />
+        // Time is unique in this app.
+        <LogEntry key={time} time={time} stocks={stocks} />
       ))}
     </div>
   );
